@@ -1,0 +1,10 @@
+^D:\LEARNING\CPP_SKILLBOX\CPP-SKILLBOX-LS-25.4\EX-1\CMAKELISTS.TXT
+setlocal
+C:\mingw64\bin\cmake.exe -SD:/learning/cpp_skillbox/cpp-skillbox-ls-25.4/ex-1 -BD:/learning/cpp_skillbox/cpp-skillbox-ls-25.4/build --check-stamp-file D:/learning/cpp_skillbox/cpp-skillbox-ls-25.4/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
